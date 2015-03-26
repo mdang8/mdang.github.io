@@ -1,1 +1,110 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheetCreate.css"/>
+    <link rel="shortcut icon" href="jenkinsICS_logo.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <title>Jenkins Create New Bundle</title>
+  </head>  
+  <body>
+    <div class="header">
+      <h1>Jenkins Create Form</h1>
+    </div>
+    <div class="form">
+      <form id="jenkinsForm">
+        <fieldset>
+          <table cellpadding=20px>
+            <tr>
+              <td><strong>Bundle:</strong></td>
+              <td><input type="text" class="jenkinsParams" name="bundle"></td>
+            </tr>
+            <tr>
+              <td><strong>Auto-Update:</strong></td>
+              <td><input type="checkbox" id="autoUpdate" class="jenkinsParams" name="AutoUpdate" value=true checked></td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <table cellpadding=20px>
+            <!--Major Group(s)-->
+            <tr>
+              <td><strong>Major Group:</strong></td>
+              <td id="MG_col1"><input type="text" id="MG1" class="jenkinsParams" name="majorGroup"></td>
+              <td id="MG_col2"><input type="text" id="MG2" class="jenkinsParams" name="majorGroup2"></td>
+              <td id="MG_col3"><input type="text" id="MG3" class="jenkinsParams" name="majorGroup3"></td>
+              <td id="MG_col4"><input type="text" id="MG4" class="jenkinsParams" name="majorGroup4"></td>
+              <td id="MG_col5"><input type="text" id="MG5" class="jenkinsParams" name="majorGroup5"></td>
+            </tr>
+            <!--Subgroup(s)-->
+            <tr>
+              <td><strong>Subgroup:</strong></td>
+              <td id="SG_col1"><input type="text" id="SG1" class="jenkinsParams" name="subgroup"></td>
+              <td id="SG_col2" class="esg"><input type="text" id="SG2" class="jenkinsParams" name="subgroup2"></td>
+              <td id="SG_col3" class="esg"><input type="text" id="SG3" class="jenkinsParams" name="subgroup3"></td>
+              <td id="SG_col4" class="esg"><input type="text" id="SG4" class="jenkinsParams" name="subgroup4"></td>
+              <td id="SG_col5" class="esg"><input type="text" id="SG5" class="jenkinsParams" name="subgroup5"></td>
+            </tr>
+            <!--Presentation(s)-->
+            <tr>
+              <td><strong>Presentation:</strong></td>
+              <td><input type="text" class="jenkinsParams" name="presentation"></td>
+            </tr>
+          </table>
+        </fieldset>
+      </form>
+      <br>
+      <button id="createButton" class="create" onclick="createBundle()">Create</button>
+      <button id="cancelButton" onclick="reloadPage()">Cancel</button>
+    </div>
+    <p id="demo"></p>
+    <script>
+      function test() {
+        var x = document.getElementsByClassName("extraParams");
+        var text = "";
+        for (var i=0; i<x.length; i++) {
+          text += x[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+      function createBundle() {
+        var check = document.getElementById("autoUpdate").checked;
+        if (check == false) {
+          document.getElementById("autoUpdate").value = false;
+        }
+        var n = document.getElementsByClassName("extraParams");
+        var MG2; var MG3; var MG4; var MG5; var SG2; var SG3; var SG4; var SG5;
+        var extraValues = new Array(MG2, MG3, MG4, MG5, SG2, SG3, SG4, SG5);        
+        for (var i=0; i<n.length; i++) {
+          extraValues[i] = n[i].value;
+        }        
+        var x = document.getElementsByClassName("jenkinsParams");
+        var bundle; var autoUpdate; var majorGroup; var subgroup; var presentation; var MG2; var MG3; var MG4; var MG5;
+        var SG2; var SG3; var SG4; var SG5;
+        var formValues = new Array(bundle, autoUpdate, majorGroup, subgroup, presentation, MG2, MG3, MG4, MG5, SG2, SG3, SG4, SG5);
+        var text = "";
+        for (var j=0; j<x.length; j++) {
+          if (x[j].value == "") {
+            x[j].value = "EMPTY";
+          }
+          formValues[j] = x[j].value;
+          text += x[j].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+        var job = "Matt-test-kiosk-admin";
+        // generates URL with Jenkins build parameters
+        var jenkinsFormURL = "https://jenkins.ics.com/job/" + job +"/buildWithParameters?token=" + token + "&Task=create new bundle" 
+          + "&Bundle=" + formValues[0] + "&Options=" + formValues[1] + "&Kiosk=" + formValues[2] + "&Major_Group=" + formValues[3] 
+          + "&Subgroup=" + formValues[4] + "&Major_Group2=" + formValues[5] + "&Major_Group3=" + formValues[6] + "&Major_Group4="
+          + formValues[7] + "&Major_Group5=" + formValues[8] + "&Subgroup2=" + formValues[9] + "&Subgroup3=" + formValues[10]
+          + "&Subgroup4=" + formValues[11] + "&Subgroup5=" + formValues[12] + "&Presentation=" + formValues[13];
+        alert("If asked, login with credentials, and then click 'Proceed' on the page after.");
+        window.location.href = jenkinsFormURL;
+      }
+      // reloads page - called by 'cancelButton'
+      function reloadPage() {
+        window.location.reload()
+      }
+    </script>
+    <noscript>Your browser does not support JavaScript.</noscript>    
+  </body>
+</html>
