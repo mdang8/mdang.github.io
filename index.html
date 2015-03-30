@@ -2,9 +2,28 @@
 <html>
   <head>
     <title>Welcome to my test site!</title>
-    <script>alert("Test");</script>
   </head>
   <body>
-    <p>This is a test site.</p>
+    <h2>Welcome!</h2>
+    <form>
+      <p>Enter your name:</p>
+      <input type="text" id="name"><br><br>
+      <p>What would you like at Wegman's?</p>
+      <input type="text" id="name"><br><br><br><br>
+      <button id="submitButton" onclick="submitForm()">Submit</button>
+      <button id="cancelButton" onclick="cancel()">Cancel</button>
+    </form>
   </body>
+  <script>
+    function submitForm() {
+      var x = document.getElementById('name').value;
+      if (x == "Steve" || x == "steve") {
+        alert("Sorry, but you a byottcchhh!!!");
+        window.open("http://i.imgur.com/xgz9nkR.gif", "OHHHHH", "height=240,width=320");
+      }
+      else {
+        alert("Okay " + x + ", I'll be sure to get that for you.");
+      }
+    }
+  </script>
 </html>
