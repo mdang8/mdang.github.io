@@ -1,0 +1,83 @@
+.header {
+  background-color: black;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.form {
+  margin: 10px;
+  padding: 10px;
+}
+
+#createButton {
+  background-color: #04B486;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+#cancelButton {
+  margin-left: 5px;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+body {
+  background-color: #EBE8E4;
+  color: #222;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+nav {
+  background-color: #FFF;
+  border: 1px solid #B2B2B2;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+  color: #888;
+  display: block;
+  margin: 8px 22px 8px 22px;
+  overflow: hidden;
+  width: 97.5%;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; 
+}
+
+nav ul li a {
+  color: rgb( 40, 44, 47 );
+  font-size: 20px;
+  display: block;
+  line-height: 56px;
+  padding: 0 24px;
+  text-decoration: none;
+}
+
+nav > ul > li:hover {
+  background-color: rgb( 40, 44, 47 );
+}
+
+nav > ul > li:hover > a {
+  color: rgb( 255, 255, 255 );
+}
+
+nav > ul > li:hover > a > .caret {
+  border-top-color: rgb( 255, 255, 255 );
+}
