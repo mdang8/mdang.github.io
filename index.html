@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <title>Welcome to my test site!</title>
   </head>
   <body>
+    <div id="headerImage">
+      <img style="width:100%" src="PCMR.png">
+    </div>
     <h2>Welcome!</h2>
     <form>
-      <p>Enter your name:</p>
+      <p><strong>Enter your name:</strong></p>
       <input type="text" id="name" required><br><br>
-      <p>What would you like at Wegman's?</p>
-      <input type="text" id="name"><br><br><br><br>
-      <button id="submitButton" onclick="submitForm()">Submit</button>
+      <p><strong>What would you like at Wegman's?</strong></p>
+      <input type="text" id="name"><br><br>
+      <p><strong>Additional details:</strong></p>
+      <textarea rows="2" cols="50"></textarea><br><br>
+      <button type="submit" id="submitButton" onclick="submitForm()">Submit</button>
       <button id="cancelButton" onclick="cancel()">Cancel</button>
     </form>
   </body>
   <script>
     function submitForm() {
       var x = document.getElementById('name').value;
-      if (x == "Steve" || x == "steve") {
+      var scoobyArray = ["steve","steven","scooby","steve ","steven ","scooby "];
+      var scoobyCheck = $.inArray(x.toLowerCase(),scoobyArray);
+      if (scoobyCheck > -1) {
         alert("Sorry, but you a byottcchhh!!!");
         window.open("http://i.imgur.com/xgz9nkR.gif", "OHHHHH", "height=240,width=320");
       }
