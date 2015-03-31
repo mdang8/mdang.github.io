@@ -23,24 +23,32 @@
   </head>
   <body>
     <div id="headerImage" class="container">
-      <img src="pcmrApproved.gif" class="img-responsive" width="571" height="185">
+      <img src="pcmrApproved.gif">
     </div>
     <h2 class="container">Welcome!</h2>
-    <form class="container">
+    <form id="form" class="container">
       <strong>Enter your name:</strong><br>
       <input type="text" id="name"><br><br>
       <strong>What would you like at Wegman's?:</strong><br>
-      <input type="text" id="name"><br><br>
+      <input type="text" id="item"><br><br>
       <strong>Additional details:</strong><br>
-      <textarea rows="2" cols="50"></textarea><br><br>
+      <textarea id="addDetails" rows="2" cols="50"></textarea><br><br>
       <button type="submit" id="submitButton" onclick="submitForm()">Submit</button>
-      <button type="reset" id="cancelButton">Cancel</button>
+      <button type="reset" id="cancelButton">Cancel</button><br><br>
+      <button id="stepUp">Got something to say? Step up.</button>
     </form>
   </body>
   <script>
     /*
-    So Nate, you want to read the source? Well here it is in all it's glory, xtra comments
+    So Nate, you want to read the source? Well here it is in all it's glory, Xtra-comments edition
     */
+    $(document).ready(function() {
+      $('#stepUp').click(function() {
+        $('#form').attr('action',"mailto:mdang808@gmail.com?subject=" + $('#name').val() + " - Wegman's Order"
+        + "&body=" + $('#item') + " -- " + $('#addDetails'));
+        $('#form').submit();
+      });
+    });
     function submitForm() {
       var x = document.getElementById('name').value;  // gets value of name input field
       var scoobyArray = ["steve","steven","scooby","steve ","steven ","scooby "];  // alternate versions of scooby
