@@ -6,18 +6,18 @@
   </head>
   <body>
     <div id="headerImage">
-      <img style="width:100%" src="PCMR.png">
+      <img src="pcmrApproved.gif">
     </div>
     <h2>Welcome!</h2>
-    <form>
-      <p><strong>Enter your name:</strong></p>
-      <input type="text" id="name" required><br><br>
-      <p><strong>What would you like at Wegman's?</strong></p>
+    <form action="MAILTO:nateotenti@gmail.com" method="post" enctype="text/plain">
+      <strong>Enter your name:</strong><br>
       <input type="text" id="name"><br><br>
-      <p><strong>Additional details:</strong></p>
+      <strong>What would you like at Wegman's?</strong><br>
+      <input type="text" id="name"><br><br>
+      <strong>Additional details:</strong><br>
       <textarea rows="2" cols="50"></textarea><br><br>
       <button type="submit" id="submitButton" onclick="submitForm()">Submit</button>
-      <button id="cancelButton" onclick="cancel()">Cancel</button>
+      <button type="reset" id="cancelButton">Cancel</button>
     </form>
   </body>
   <script>
