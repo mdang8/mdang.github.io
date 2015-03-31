@@ -1,3 +1,15 @@
+<!--
+   ▄████████  ▄██████▄  ███    █▄     ▄████████  ▄████████    ▄████████ 
+  ███    ███ ███    ███ ███    ███   ███    ███ ███    ███   ███    ███ 
+  ███    █▀  ███    ███ ███    ███   ███    ███ ███    █▀    ███    █▀  
+  ███        ███    ███ ███    ███  ▄███▄▄▄▄██▀ ███         ▄███▄▄▄     
+▀███████████ ███    ███ ███    ███ ▀▀███▀▀▀▀▀   ███        ▀▀███▀▀▀     
+         ███ ███    ███ ███    ███ ▀███████████ ███    █▄    ███    █▄  
+   ▄█    ███ ███    ███ ███    ███   ███    ███ ███    ███   ███    ███ 
+ ▄████████▀   ▀██████▀  ████████▀    ███    ███ ████████▀    ██████████ 
+                                     ███    ███                         
+
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,14 +22,14 @@
     <title>Welcome to my test site!</title>
   </head>
   <body>
-    <div id="headerImage">
-      <img src="pcmrApproved.gif">
+    <div id="headerImage" class="container">
+      <img src="pcmrApproved.gif" class="img-responsive" width="571" height="185">
     </div>
-    <h2>Welcome!</h2>
-    <form action="MAILTO:nateotenti@gmail.com" method="post" enctype="text/plain">
+    <h2 class="container">Welcome!</h2>
+    <form class="container">
       <strong>Enter your name:</strong><br>
       <input type="text" id="name"><br><br>
-      <strong>What would you like at Wegman's?</strong><br>
+      <strong>What would you like at Wegman's?:</strong><br>
       <input type="text" id="name"><br><br>
       <strong>Additional details:</strong><br>
       <textarea rows="2" cols="50"></textarea><br><br>
@@ -26,16 +38,22 @@
     </form>
   </body>
   <script>
+    /*
+    So Nate, you want to read the source? Well here it is in all it's glory, xtra comments
+    */
     function submitForm() {
-      var x = document.getElementById('name').value;
-      var scoobyArray = ["steve","steven","scooby","steve ","steven ","scooby "];
-      var scoobyCheck = $.inArray(x.toLowerCase(),scoobyArray);
+      var x = document.getElementById('name').value;  // gets value of name input field
+      var scoobyArray = ["steve","steven","scooby","steve ","steven ","scooby "];  // alternate versions of scooby
+      var scoobyCheck = $.inArray(x.toLowerCase(),scoobyArray);  // checks if name is in scoobyArray -- returns index or -1 for false
       if (scoobyCheck > -1) {
-        alert("Sorry, but you a byottcchhh!!!");
-        window.open("http://i.imgur.com/xgz9nkR.gif", "OHHHHH", "height=240,width=320");
+        alert("Sorry, but you a byottcchhh!!!");  // (1=1)
+        window.open("http://i.imgur.com/xgz9nkR.gif","OHHHHH","width=320,height=240");  // "But I'm not a wrapper."
+      }
+      else if (x == "") {  // checks if name field is left blank
+        alert("Why you no give name?");  // Why?
       }
       else {
-        alert("Okay " + x + ", I'll be sure to get that for you.");
+        alert("Okay " + x + ", I'll be sure to get that for you.");  // maybe...
       }
     }
   </script>
