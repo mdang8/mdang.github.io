@@ -20,10 +20,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <title>Welcome to my test site!</title>
+    <style>
+      #check2 {
+        margin-left: 10px;
+      }
+      #submitButton {
+        border-color: black; border-width: 1px; border-radius: 5px; margin-right: 5px;
+      }
+      #cancelButton {
+        margin-left: 5px; border-color: black; border-width: 1px; border-radius: 5px;
+      }
+    </style>
   </head>
   <body>
     <div id="headerImage" class="container">
-      <img src="pcmrApproved.gif">
+      <img src="pcmrApproved.gif" class="img-responsive" width="571" height="185">
     </div>
     <h2 class="container">Welcome!</h2>
     <form id="form" class="container">
@@ -32,33 +43,40 @@
       <strong>What would you like at Wegman's?:</strong><br>
       <input type="text" id="item"><br><br>
       <strong>Additional details:</strong><br>
-      <textarea id="addDetails" rows="2" cols="50"></textarea><br><br>
+      <textarea id="addDetails" rows="2" cols="30"></textarea><br><br>
+      <strong>How would you describe yourself?</strong><br>
+      <input type="radio" id="check1" name="describe" value="peasant"> Console Peasant
+      <input type="radio" id="check2" name="describe" value="brother"> Master Race<br><br>
       <button type="submit" id="submitButton" onclick="submitForm()">Submit</button>
       <button type="reset" id="cancelButton">Cancel</button><br><br>
-      <button id="stepUp">Got something to say? Step up.</button>
+      <!--<button id="stepUp">Got something to say? Step up.</button>-->
     </form>
   </body>
   <script>
     /*
     So Nate, you want to read the source? Well here it is in all it's glory, Xtra-comments edition
     */
-    $(document).ready(function() {
+    /*$(document).ready(function() {
       $('#stepUp').click(function() {
         $('#form').attr('action',"mailto:mdang808@gmail.com?subject=" + $('#name').val() + " - Wegman's Order"
         + "&body=" + $('#item') + " -- " + $('#addDetails'));
         $('#form').submit();
       });
-    });
+    });*/
     function submitForm() {
       var x = document.getElementById('name').value;  // gets value of name input field
+      if (x == "") {  // checks if name field is left blank
+        alert("Why you no give name?");  // Why?
+      }
       var scoobyArray = ["steve","steven","scooby","steve ","steven ","scooby "];  // alternate versions of scooby
       var scoobyCheck = $.inArray(x.toLowerCase(),scoobyArray);  // checks if name is in scoobyArray -- returns index or -1 for false
-      if (scoobyCheck > -1) {
-        alert("Sorry, but you a byottcchhh!!!");  // (1=1)
+      if ((scoobyCheck > -1) && (document.getElementById('check1').checked)) {  // lies...
+        alert("Ok, I know you're lying so that's why you still a byottcchhh!!!");  // (1=1)
         window.open("http://i.imgur.com/xgz9nkR.gif","OHHHHH","width=320,height=240");  // "But I'm not a wrapper."
       }
-      else if (x == "") {  // checks if name field is left blank
-        alert("Why you no give name?");  // Why?
+      else if ((scoobyCheck > -1) && (document.getElementById('check2').checked)) {  // checks for console peasant scooby
+        alert("The PS4 was a bad purchase Steve.");  // (1=1)
+        window.open("http://i.imgur.com/xgz9nkR.gif","OHHHHH","width=320,height=240");  // ehhh still including it
       }
       else {
         alert("Okay " + x + ", I'll be sure to get that for you.");  // maybe...
