@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Is The Matrix On?</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="TheMatrixCheck/css/stylesheetMatrixCheck.css"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://rawgit.com/padolsey-archive/jquery.fn/master/cross-domain-ajax/jquery.xdomainajax.js"></script>
+		<script src="TheMatrixCheck/js/matrixChecker.js"></script>
+	</head>
+	<body>
+		<div id="loadingDiv">
+			<img id="loadingAnim" src="img/loadingAnim.gif" height="64" width="64">
+		</div>
+		<div id="responseDiv">
+			<div id="statusDiv"></div>
+			<div id="responseGifDiv"></div>
+		</div>
+		<div id="otherTextDiv"></div>
+		<div id="searchForShow">
+			<h3>Search for another show:</h3>
+			<input type="text" id="searchShow">
+			<input type="submit" onclick="checkForTheMatrix(false)" value="Search">
+		</div>
+		<p id="howItWorks"><a href="javascript:howWork()">How does this work?</a></p>
+	</body>
+</html>

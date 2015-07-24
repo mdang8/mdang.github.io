@@ -9,11 +9,19 @@
 		<script src="js/matrixChecker.js"></script>
 	</head>
 	<body>
+		<div id="loadingDiv">
+			<img id="loadingAnim" src="img/loadingAnim.gif" height="64" width="64">
+		</div>
 		<div id="responseDiv">
 			<div id="statusDiv"></div>
 			<div id="responseGifDiv"></div>
 		</div>
-		<button id="testButton" onclick="checkForMatrix('The Matrix')">Click here!</button>
-		<div id="otherText"></div>
+		<div id="otherTextDiv"></div>
+		<div id="searchForShow">
+			<h3>Search for another show:</h3>
+			<input type="text" id="searchShow">
+			<input type="submit" onclick="checkForTheMatrix(false)" value="Search">
+		</div>
+		<p id="howItWorks"><a href="javascript:howWork()">How does this work?</a></p>
 	</body>
 </html>
