@@ -37,10 +37,6 @@ body {
 	font-weight: bold;
 }
 
-#dlcDisclaimer {
-	font-size: 11px;
-}
-
 #responseGif {
 	display: block;
 	margin-left: auto;
