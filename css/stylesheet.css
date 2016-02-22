@@ -75,6 +75,39 @@ h1 {
   font-size: 20px;
 }
 
+#home {
+  height: 750px;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+}
+
+#about {
+  height: 300px;
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
+
+#contact {
+  height: 7500px;
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
+
+.section-header {
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+a {
+  color: white;
+}
+
 /*#intro-container {
   width: 50%;
   margin: 0 auto;
