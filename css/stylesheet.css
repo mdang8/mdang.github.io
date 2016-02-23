@@ -1,4 +1,5 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 body {  
   background-color: #1a1a1a;
@@ -8,6 +9,7 @@ body {
 }
 
 h1 {
+  font-family: "Roboto", sans-serif;
 	font-size: 500%;
 	text-align: center;
 	margin: 50px auto;
@@ -67,8 +69,8 @@ h1 {
 #about-text {
   width: 75%;
   margin: 0 auto;
-  vertical-align: center;
   display: inline-block;
+  line-height: 150%;
 }
 
 #contact {
@@ -145,3 +147,52 @@ nav > ul > li:hover > a {
 nav > ul > li:hover > a > .caret {
   border-top-color: rgb( 255, 255, 255 );
 }
+
+
+/* Mobile devices */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 300%;
+  }
+
+  #home {
+    width: 100%;
+  }
+
+  #home span {
+    font-size: 95%;
+  }
+
+  #about-text{
+    width: 100%;
+    font-size: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
