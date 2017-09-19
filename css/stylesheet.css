@@ -1,3 +1,7 @@
+body {
+    background-color: #eaedf2;
+}
+
 .navbar {
   margin-bottom: 10px;
 }
@@ -24,7 +28,7 @@
 }
 
 .navbar li a:hover {
-    background-color: #ab5dda;
+    background-color: #4286f4;
 }
 
 #profile-pic {
@@ -34,17 +38,35 @@
     display: block;
 }
 
+#about-text {
+    padding: 1em 0 0 0;
+}
+
 .img-circle {
     border-radius: 50%;
+}
+
+#technical-skills-list {
+    list-style-position: outside;
+    padding-left: 1.5em;
 }
 
 hr {
     margin: 1em 0 2em 0;
 }
 
+.about-section {
+    padding: 1em 0 3em 0;
+}
+
 @media only screen and (min-width: 768px) {
     #profile-pic {
         max-width: 50%;
         height: auto;
+        float: left;
+    }
+
+    .about-section {
+        padding: 1em 0 4em 0;
     }
 }
