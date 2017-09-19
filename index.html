@@ -1,43 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
-    <title>Matthew Dang - Northeastern University</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div id="home">
-      <h1>Matthew Dang</h1>
-      <div id="face-container">
-        <img id="my-face" src="img/myFace.jpg">
-      </div>
-      <span>
-        I'm a third year Computer Science major at Northeastern University. I'm looking for a software developer/programmer related job for my second co-op.
-      </span>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="http://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+    <!-- Milligram CSS minified -->
+    <link rel="stylesheet" href="dist/milligram.min.css">
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul id="navbar-list">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </div>
-    <div class="section-header">
-      <h2>About</h2>
+    <div class="container" id="about">
+        <div class="about-section">
+            <div class="row">
+                <div class="column">
+                    <h2>About Me</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <img class="img-thumbnail img-circle" id="profile-pic" src="img/myFace.jpg">
+                </div>
+                <div class="column">
+                    <p id="about-text">
+                        I'm a senior at Northeastern University studying Computer Science. Formerly, I was a Computer Engineering major, but switched at the end of my second year. I've completed two co-ops during my time there, the first at Integrated Computer Solutions (ICS) and the second at Massachusetts Office of Information Technology (MassIT). At ICS, I was introduced to web development and discovered a passion for it. Developing applications using different web technologies grew to be something I enjoyed doing and learning more about.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <div class="row">
+                <div class="column">
+                    <h2>Technical Skills</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <ul id="technical-skills-list">
+                        <li class="list-group-item">
+                            <strong>Languages:</strong> JavaScript (Node.js), Python, PHP, Java, Racket, HTML, CSS
+                        </li>
+                        <li class="list-group-item">
+                            <strong>Storage Technologies:</strong> MySQL, PostgreSQL, MongoDB
+                        </li>
+                        <li class="list-group-item">
+                            <strong>DevOps:</strong> AWS, Heroku, Jenkins, Travis
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div id="about" class="section">
-      <div id="about-text">
-Hi, my name is Matt and I'm from Hudson, MA. I'm currently in my third year at Northeastern University and am working towards a bachelors in Computer Science. Previously, I was a Computer Engineering major, but switched because although it was felt like something I wanted pursue as a career, it wasn't exactly what I wanted to do and was missing something. I completed my first co-op last year as a software engineer and it was still part of the Engineering track. In that co-op, I was exposed to web development and I enjoyed doing that very much. I developed both front and back end code, so I have experience working on both the client and server side. I felt that by switching my major to Computer Science, it would best expose me to work related to this. This interest also led to me wanting to create small projects on my own outside of classwork. I am currently the Treasurer for the Vietnamese Student Association at Northeastern and along with my duties as Treasurer, I make small challenges in our weekly newsletters for our members to do for fun. These challenges are mostly all created purely on the front end, but a few of them include a back end working behind the scenes. These sort of projects are fun to me and I believe that it really defines why I chose to pursue a degree in Computer Science.
-      </div>
+    <div class="container" id="experience">
+
     </div>
-    <div class="section-header">
-      <h2>Contact</h2>
-    </div>
-    <div id="contact" class="section">
-      <p>Email: <a href="mailto:dang.ma@husky.neu.edu">dang.ma@husky.neu.edu</a></p>
-      <p>LinkedIn: <a href="http://www.linkedin.com/in/matthewdang8">http://www.linkedin.com/in/matthewdang8</a></p>
-      <p>GitHub: <a href="http://www.github.com/mdang8">mdang8</a></p>
-    </div>
-  </body>
+</body>
 </html>
