@@ -5,67 +5,70 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="http://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+    <!-- Milligram CSS minified -->
+    <link rel="stylesheet" href="dist/milligram.min.css">
+
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-contents" aria-controls="navbar-contents" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-contents">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar">
+        <ul id="navbar-list">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
     <div class="container" id="about">
         <div class="row">
-            <p id="about-text">
-                I'm a senior at Northeastern University studying Computer Science. Formerly, I was a Computer Engineering major, but switched at the end of my second year. I've completed two co-ops during my time there, the first at Integrated Computer Solutions (ICS) and the second at Massachusetts Office of Information Technology (MassIT). At ICS, I was introduced to web development and discovered a passion for it. Developing applications using different web technologies grew to be something I enjoyed doing and learning more about.
-            </p>
+            <div class="column">
+                <h2>About Me</h2>
+                <hr>
+            </div>
         </div>
         <div class="row">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Languages:</strong> JavaScript (Node.js), Python, PHP, Java, Racket, HTML, CSS
-                </li>
-                <li class="list-group-item">
-                    <strong>Storage Technologies:</strong> MySQL, PostgreSQL, MongoDB
-                </li>
-                <li class="list-group-item">
-                    <strong>DevOps:</strong> AWS, Heroku, Jenkins, Travis
-                </li>
-            </ul>
+            <div class="column">
+                <img class="img-thumbnail img-circle" id="profile-pic" src="img/myFace.jpg">
+            </div>
+            <div class="column">
+                <p id="about-text">
+                    I'm a senior at Northeastern University studying Computer Science. Formerly, I was a Computer Engineering major, but switched at the end of my second year. I've completed two co-ops during my time there, the first at Integrated Computer Solutions (ICS) and the second at Massachusetts Office of Information Technology (MassIT). At ICS, I was introduced to web development and discovered a passion for it. Developing applications using different web technologies grew to be something I enjoyed doing and learning more about.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <h2>Skills</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <strong>Languages:</strong> JavaScript (Node.js), Python, PHP, Java, Racket, HTML, CSS
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Storage Technologies:</strong> MySQL, PostgreSQL, MongoDB
+                    </li>
+                    <li class="list-group-item">
+                        <strong>DevOps:</strong> AWS, Heroku, Jenkins, Travis
+                    </li>
+                </ul>
+            </div>
         </div>
 
     </div>
     <div class="container" id="experience">
-        
-    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-    crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
+    </div>
 </body>
 </html>
