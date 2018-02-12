@@ -28,9 +28,8 @@
         <ul id="navbar-list">
             <li><a class="active" href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <nav class="navbar" id="nav-desktop"></nav>
@@ -90,12 +89,66 @@
                     </ul>
                 </div>
             </div>
+        </div>
 
+    </div>
+
+    <div class="container page" id="projects">
+        <div class="row">
+            <div class="column">
+                <h2>Projects</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="container project">
+            <h4>NU Office of the Registrar Course Schedule Tool</h4>
+            <p>Worked in a group of five members, utilizing an Agile software development process, to develop a web application to be used by the Office of the Registrar at Northeastern University. The goal of the project was to create a tool to allow a more streamlined process for communicating with the various academic departments to create course schedules.</p>
+            <p><strong>Technologies Used:</strong> AngularJS, PHP, MySQL, Amazon Web Services EC2, Jenkins</p>
+            <hr>
+        </div>
+        <div class="container project">
+            <h4>DangRhee</h4>
+            <p>This was originally a project for my Database Design class. The project was a chat bot for the Facebook Messenger platform that retrieved historical weather data stored in a MySQL database. The weather data was downloaded from a web source and inserted into the database using a simple Python script.</p>
+            <p>After the class ended, I rebuilt the project by removing the database feature and instead used API calls to retrieve current weather data.</p>
+            <p><strong>Technologies Used:</strong> Node.js, MySQL, Heroku</p>
+            <p><a href="">GitHub Repository</a></p>
+            <hr>
+        </div>
+        <div class="container project">
+            <h4>Is The Matrix On?</h4>
+            <p>This was a project that I did to help me start learning HTML, CSS, and JavaScript. It was a basic web application that made a request to retrieve the HTML source code of a TV listings site and made a simple search for the text of an inputted TV show name.</p>
+            <p>Later on, I rebuilt the application using the Express web framework to instead scrape a TV listings site and parse it for more accurate results. I also added unit tests using Chai and Mocha with continuous integration from Travis CI.
+            <p><strong>Technologies Used:</strong> Node.js, HTML, CSS, Heroku, Travis CI</p>
+            <p><a href="">GitHub Repository</a></p>
+            <hr>
         </div>
     </div>
-    <div class="container" id="experience">
+
+    <div class="container page" id="contact">
+
+        <div class="row">
+            <div class="column">
+                <h2>Contact</h2>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="home-content" id="title-icons">
+                <a href="mailto:dang.ma@husky.neu.edu" class="icon-link">
+                    <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/mdang8" class="icon-link">
+                    <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/matthewdang8/" class="icon-link">
+                    <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
 
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="js/main.js"></script>
